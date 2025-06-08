@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker | Budget Details</title>
+    <link rel="stylesheet" href="css/budget_details.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/delete_details.js"></script>
+</head>
+<body>
+
+<nav>
+    <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+    <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.php">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="budget_summary.php">Summary</a>
+        <a href="profile.php">Profile</a>
+    </div>
+</nav>
+
+<h2 id="head">Budget Details: <!-- #BUDGET_NAME# --></h2>
+<p id="para"><b>Monthly Income:</b> <!-- #MONTHLY_INCOME# --></p>
+<p id="para"><b>Start Date:</b> <!-- #START_DATE# --></p>
+<p id="para"><b>End Date:</b> <!-- #END_DATE# --></p>
+
+<h2>Budget Categories</h2>
+<table>
+    <tr>
+        <th>Category</th>
+        <th>Allocated</th>
+        <th>Spent</th>
+        <th>Remaining</th>
+        <th>Delete</th>
+    </tr>
+    <!-- #CATEGORY_ROWS# -->
+</table>
+
+<!-- #ADD_CATEGORY_BTN# -->
+
+</body>
+</html>

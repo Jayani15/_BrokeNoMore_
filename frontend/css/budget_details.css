@@ -1,0 +1,61 @@
+#head {
+    text-align: center;
+    margin:30px 0px;
+}
+
+#para {
+    text-align: center;
+    margin: 15px;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-left: 70px;
+}
+table {
+    margin-left: 70px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0.005, 0.05); 
+    margin-bottom: 20px;
+}
+td,th {
+    padding :7px 65px;
+}
+tr:nth-child(odd) {
+    background-color: white;
+}
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+.edit-btn {
+  background-color: gold;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
