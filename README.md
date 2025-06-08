@@ -18,7 +18,7 @@ A simple web-based expense tracking application built with PHP and MySQL.
 - PHP  
 - MySQL (phpMyAdmin)  
 - HTML, CSS, JavaScript  
-- Apache (XAMPP or similar local server)  
+- Apache (XAMPP)  
 
 ---
 
