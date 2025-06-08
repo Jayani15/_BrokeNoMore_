@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Category</title>
+    <link rel="stylesheet" href="css/addnew_category.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<nav>
+    <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+    <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.html">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="budget_summary.html">Summary</a>
+        <a href="profile.html">Profile</a>
+    </div>
+</nav>
+
+<div class="box">
+    <h2>Add New Category</h2>
+    <form method="post" id="categoryForm" action="">
+        <fieldset>
+            <label>Category</label><br>
+            <input type="text" name="category" placeholder="e.g. Food" required><br><br>
+
+            <label>Allocated Amount</label><br>
+            <input type="number" name="allocated_amount" placeholder="e.g. 5000" step="0.01" required><br><br>
+
+            <button type="submit" class="save-btn">Save</button>
+        </fieldset>
+    </form>
+</div>
+
+<script>
+  // Get budget id from URL param '?id=...'
+  const urlParams = new URLSearchParams(window.location.search);
+  const budgetId = urlParams.get('id');
+
+  if (!budgetId) {
+    alert("No budget ID provided in URL! Please add ?id=your_budget_id");
+    document.getElementById('categoryForm').style.display = 'none';
+  } else {
+    // Set the form's action to POST to your PHP processing script with budget id param
+    document.getElementById('categoryForm').action = 'addnew_category.php?id=' + budgetId;
+  }
+</script>
+</body>
+</html>

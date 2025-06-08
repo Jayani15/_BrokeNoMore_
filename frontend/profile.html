@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker | Profile</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+        <div class="links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="your_budget.html">Budget</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="budget_summary.html">Summary</a>
+            <a href="profile.php">Profile</a>
+        </div>
+    </nav>
+
+    <div class="box">
+        <i style="font-size: 50px; color: lightslategray;" class="fa-solid fa-user"></i>
+        <br><br>
+        <h2><!-- #NAME# --></h2>
+        <br><br>
+        <form>
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="name" value="<!-- #NAME# -->" readonly>
+
+            <label for="username">Username :</label>
+            <input type="text" id="username" name="username" value="<!-- #USERNAME# -->" readonly><br><br>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" value="<!-- #EMAIL# -->" readonly>
+
+            <label for="password">Password :</label>
+            <input type="password" id="password" name="password" value="********" readonly><br><br>
+
+            <button class="btn" onclick="window.location.href='login.html'; return false;">Log out</button>
+        </form>
+    </div>
+</body>
+</html>

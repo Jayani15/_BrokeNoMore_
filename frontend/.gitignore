@@ -1,0 +1,5 @@
+# Ignore environment config
+.env
+
+# Ignore Apache config
+.htaccess
