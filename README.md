@@ -31,13 +31,9 @@ An easy-to-use personal finance management web app that lets users record and tr
 ## Future Improvements
 
 - Implement budgeting features
-
 - Export expenses to Excel or PDF
-
 - Add category-wise charts (using Chart.js)
-
 - Two-factor authentication
-
 - Progressive Web App (PWA) support
 
 ##🧑 Authors
