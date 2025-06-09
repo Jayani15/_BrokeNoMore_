@@ -26,73 +26,27 @@ An easy-to-use personal finance management web app that lets users record and tr
 
 ---
 
-## 📁 Folder Structure
 
-```plaintext
-project/
-│
-├── css/
-│   └── styles.css
-├── js/
-│   └── script.js
-├── images/
-│   └── icons, backgrounds, etc.
-├── register.html
-├── login.html
-├── dashboard.html
-├── expenses.html
-├── add-expense.html
-├── login.php
-├── register.php
-├── db.php
-├── add_expense.php
-├── delete_expense.php
-└── README.md
-🧑‍💻 Setup Instructions
-Clone the repository or download the source code.
 
-Set up a local server using XAMPP, MAMP, or host on InfinityFree.
+## Future Improvements
 
-Import the included SQL file into phpMyAdmin to set up the MySQL database.
+- Implement budgeting features
 
-Configure db.php with your database credentials:
+- Export expenses to Excel or PDF
 
-php
-Copy code
-$conn = mysqli_connect("localhost", "username", "password", "database_name");
-Launch the site in your browser by opening index.html or through your hosted domain.
+- Add category-wise charts (using Chart.js)
 
-📦 Deployment
-The site is hosted using InfinityFree, a free web hosting platform:
+- Two-factor authentication
 
-Files uploaded using FTP (e.g., FileZilla)
+- Progressive Web App (PWA) support
 
-Domain configured at https://jaii.ct.ws
+##🧑 Authors
 
-MySQL database managed via InfinityFree's cPanel
+Developed by 
 
-⚠️ Known Issues / Limitations
-No HTTPS (SSL) on free hosting
+- Jayani
+- Bharath
+- Srihitha
+- Yasasri
 
-Session management can be improved
 
-Minimal data validation on client-side
-
-📌 Future Improvements
-Implement budgeting features
-
-Export expenses to Excel or PDF
-
-Add category-wise charts (using Chart.js)
-
-Two-factor authentication
-
-Progressive Web App (PWA) support
-
-🧑 Author
-Developed by Jaii
-
-If you liked this project, feel free to ⭐ the repo and share your feedback!
-
-vbnet
-Copy code
