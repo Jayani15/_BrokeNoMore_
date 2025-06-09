@@ -36,7 +36,9 @@ An easy-to-use personal finance management web app that lets users record and tr
 - Two-factor authentication
 - Progressive Web App (PWA) support
 
-##🧑 Authors
+---
+
+## 🧑 Authors
 
 Developed by 
 
