@@ -1,100 +1,98 @@
-# PHP Expense Tracker
+# 💸 Expense Tracker Website
 
-A simple web-based expense tracking application built with PHP and MySQL.
+An easy-to-use personal finance management web app that lets users record and track their daily expenses. Built with core web technologies and hosted online for public use.
 
----
-
-## Features
-
-- User-friendly interface to add, edit, and delete expenses  
-- Budget management and tracking  
-- Responsive design for desktop and mobile  
-- Secure database connection using environment variables  
+🔗 **Live Demo:** [https://jaii.ct.ws](https://jaii.ct.ws)
 
 ---
 
-## Technology Stack
+## 🛠 Tech Stack
 
-- PHP  
-- MySQL (phpMyAdmin)  
-- HTML, CSS, JavaScript  
-- Apache (XAMPP or similar local server)  
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** PHP  
+- **Database:** MySQL  
+- **Server:** Apache (via InfinityFree Hosting)
 
 ---
 
-## Setup Instructions (Detailed)
+## 🚀 Features
 
-### 1. Clone the repository
+- User registration and login
+- Secure password handling (optionally hashed with `password_hash`)
+- Add, update, and delete expense entries
+- View daily/monthly total expenses
+- Responsive design for mobile and desktop
+- Persistent data storage using MySQL
 
-Open your terminal or command prompt and run:
+---
 
-```bash```
-git clone https://github.com/Jayani15/my-php-expense-tracker.git
-cd my-php-expense-tracker
-This downloads the project files to your local machine.
+## 📁 Folder Structure
 
-### 2. Create a new MySQL database
+```plaintext
+project/
+│
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+├── images/
+│   └── icons, backgrounds, etc.
+├── register.html
+├── login.html
+├── dashboard.html
+├── expenses.html
+├── add-expense.html
+├── login.php
+├── register.php
+├── db.php
+├── add_expense.php
+├── delete_expense.php
+└── README.md
+🧑‍💻 Setup Instructions
+Clone the repository or download the source code.
 
-Open phpMyAdmin by visiting http://localhost/phpmyadmin in your browser.
+Set up a local server using XAMPP, MAMP, or host on InfinityFree.
 
-Click on Databases tab.
+Import the included SQL file into phpMyAdmin to set up the MySQL database.
 
-Enter a name for your database, for example: expense_tracker.
+Configure db.php with your database credentials:
 
-Click Create.
+php
+Copy code
+$conn = mysqli_connect("localhost", "username", "password", "database_name");
+Launch the site in your browser by opening index.html or through your hosted domain.
 
-### 3. Import the database schema and data
+📦 Deployment
+The site is hosted using InfinityFree, a free web hosting platform:
 
-In phpMyAdmin, select the database you just created (expense_tracker).
+Files uploaded using FTP (e.g., FileZilla)
 
-Click the Import tab.
+Domain configured at https://jaii.ct.ws
 
-Click Choose File and select the SQL dump file from the project folder, e.g.:
-sql/database_dump.sql
-(If you don’t have this file, you can export your current database or create one based on your tables.)
+MySQL database managed via InfinityFree's cPanel
 
-Click Go to import the tables and data.
+⚠️ Known Issues / Limitations
+No HTTPS (SSL) on free hosting
 
-### 4. Configure your environment variables
+Session management can be improved
 
-Copy the file .env.example to .env in your project root. This file stores sensitive information and should never be pushed to GitHub.
+Minimal data validation on client-side
 
-For example, in terminal (from project root):
+📌 Future Improvements
+Implement budgeting features
 
-bash
-Copy
-Edit
-copy .env.example .env
-Open .env in a text editor and update the database credentials to match your local setup:
+Export expenses to Excel or PDF
 
-ini
-Copy
-Edit
-DB_HOST=localhost
-DB_USER=root
-DB_PASS=your_mysql_password
-DB_NAME=expense_tracker
-If you don’t use a password for root, leave DB_PASS empty.
+Add category-wise charts (using Chart.js)
 
-### 5. Start your local server
-Launch XAMPP, WAMP, or your preferred local server stack.
+Two-factor authentication
 
-Ensure Apache and MySQL services are running.
+Progressive Web App (PWA) support
 
-Place your project inside the server’s web root folder (e.g., C:\xampp\htdocs\Phase2).
+🧑 Author
+Developed by Jaii
 
-6. Access the application in your browser
-Navigate to the frontend page, for example:
+If you liked this project, feel free to ⭐ the repo and share your feedback!
 
-bash
-Copy
-Edit
-http://localhost/Phase2/frontend/your_budget.html
-You should see your expense tracker’s user interface.
-
-Usage
-Register or login to start tracking your expenses.
-
-Add new budgets and expenses easily via the UI.
-
-View summaries and reports of your spending habits.
+vbnet
+Copy code
