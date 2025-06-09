@@ -1,4 +1,4 @@
-# 💸 Expense Tracker Website
+# Expense Tracker Website
 
 An easy-to-use personal finance management web app that lets users record and track their daily expenses. Built with core web technologies and hosted online for public use.
 
@@ -6,7 +6,7 @@ An easy-to-use personal finance management web app that lets users record and tr
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** PHP  
@@ -15,7 +15,7 @@ An easy-to-use personal finance management web app that lets users record and tr
 
 ---
 
-## 🚀 Features
+## Features
 
 - User registration and login
 - Secure password handling (optionally hashed with `password_hash`)
@@ -38,7 +38,7 @@ An easy-to-use personal finance management web app that lets users record and tr
 
 ---
 
-## 🧑 Authors
+## Authors
 
 Developed by 
 
