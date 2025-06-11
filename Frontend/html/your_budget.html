@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/your_budget.css">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="js/delete_budget.js"></script>
+</head>
+<body>
+  <nav>
+    <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+    <div class="links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="your_budget.php">Budget</a>
+      <a href="expenses.html">Expenses</a>
+      <a href="budget_summary.html">Summary</a>
+      <a href="profile.html">Profile</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Your Budgets</h2>
+    <table>
+      <tr>
+        <th>Budget Name</th>
+        <th>Monthly Income</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Details</th>
+        <th>Delete</th>
+      </tr>
+
+      <!-- #BUDGET_ROWS# -->
+
+    </table>
+
+    <button class="add-btn" onclick="window.location.href='addnew_budget.html'">Add New Budget</button>
+  </div>
+</body>
+</html>
