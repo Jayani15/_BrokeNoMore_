@@ -1,0 +1,109 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f6f2;
+    margin: 0;
+    padding: 0;
+}
+
+#wel {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    padding: 0 20px;
+}
+
+#wel2 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    padding: 0 20px;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    #wel {
+        margin-top: 50px;
+        font-size: 2rem;
+    }
+    
+    #wel2 {
+        font-size: 1.4rem;
+    }
+    
+    .dashboard-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+        padding: 30px;
+    }
+    
+    .card {
+        padding: 35px 25px;
+        font-size: 19px;
+    }
+    
+    .card i {
+        font-size: 2.5rem;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    #wel {
+        margin-top: 60px;
+        font-size: 2.5rem;
+    }
+    
+    .dashboard-container {
+        grid-gap: 30px;
+        padding: 50px;
+    }
+    
+    .card {
+        padding: 40px;
+        font-size: 20px;
+    }
+    
+    .card i {
+        font-size: 3rem;
+    }
+}
