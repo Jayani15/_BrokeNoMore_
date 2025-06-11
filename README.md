@@ -1,4 +1,4 @@
-# Expense Tracker Website
+# Expense Tracker Website - BrokeNoMore
 
 An easy-to-use personal finance management web app that lets users record and track their daily expenses. Built with core web technologies and hosted online for public use.
 
