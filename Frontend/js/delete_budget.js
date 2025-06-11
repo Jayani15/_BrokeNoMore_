@@ -1,4 +1,3 @@
-// delete_budget.js
 function deleteBudget(id) {
     if (confirm("Are you sure you want to delete this budget?")) {
         fetch('delete_budget.php', {
@@ -9,10 +8,10 @@ function deleteBudget(id) {
         .then(response => response.text())
         .then(result => {
             if (result.trim() === 'success') {
-                alert("✅ Budget deleted!");
-                location.reload(); // Refresh the page to reflect deletion
+                alert("Budget deleted!");
+                location.reload(); 
             } else {
-                alert("❌ Failed to delete budget.");
+                alert(" Failed to delete budget.");
             }
         });
     }
