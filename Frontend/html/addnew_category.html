@@ -45,7 +45,7 @@
     document.getElementById('categoryForm').action = 'addnew_category.php?id=' + budgetId;
 
     document.getElementById('categoryForm').addEventListener('submit', function(e) {
-      e.preventDefault(); // Stop form for now
+      e.preventDefault(); 
       const allocatedInput = document.querySelector('input[name="allocated_amount"]');
       const allocated = parseFloat(allocatedInput.value);
 
@@ -54,7 +54,6 @@
         return;
       }
 
-      // Fetch current income and allocated total
       fetch(`addnew_category.php?id=${budgetId}&check=true`)
         .then(res => res.json())
         .then(data => {
@@ -65,7 +64,6 @@
           if (newTotal > income) {
             alert("You've exceeded your budget limit for this month!");
           } else {
-            // All good, submit form
             e.target.submit();
           }
         })
