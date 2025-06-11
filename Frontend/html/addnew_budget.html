@@ -12,40 +12,42 @@
       <nav>
         <h1>BrokeNoMore</h1>
         
-    <div class="links">
-      <a href="dashboard.html">Dashboard</a>
-      <a href="your_budget.html">Budgets</a>
-      <a href="expenses.html">Expenses</a>
-      <a href="profile.html">Profile</a>
-    </div>
+        <div class="links">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="your_budget.html">Budgets</a>
+          <a href="expenses.html">Expenses</a>
+          <a href="profile.html">Profile</a>
+        </div>
    
-</nav>
+      </nav>
 
-         <div class="box">
-    <h2>Add New Budget</h2>
-    <form action="addnew_budget.php" method="post">
-        <fieldset>
-      
-      <label>Budget Name</label><br>
-      <input type="text" placeholder="e.g. My Budget" name="budget_name"><br><br>
-
-      <label>Monthly Income</label><br>
-      <input type="number" placeholder="e.g. 500000" name = "monthly_income"><br><br>
-
+        <div class="box">
+           <h2>Add New Budget</h2>
+           <form action="addnew_budget.php" method="post">
+               
+                <fieldset>
+              
+                  <label>Budget Name</label><br>
+                  <input type="text" placeholder="e.g. My Budget" name="budget_name"><br><br>
+            
+                  <label>Monthly Income</label><br>
+                  <input type="number" placeholder="e.g. 500000" name = "monthly_income"><br><br>
+            
+                
+                  <label>Start Date</label><br>
+                  <input type="date" placeholder="16/10/2007" name = "start_date"><br><br>
+            
+                  <label>End Date</label><br>
+                  <input type="date" name="end_date"><br><br>
+            
+                  <button type="submit">Save</button>
+        
     
-      <label>Start Date</label><br>
-      <input type="date" placeholder="16/10/2007" name = "start_date"><br><br>
-
-      <label>End Date</label><br>
-      <input type="date" name="end_date"><br><br>
-
-      <button type="submit">Save</button>
-
-
-      </fieldset>
-    </form>
+               </fieldset>
+        </form>
   </div>
 
 
-    </body>
+   </body>
+    
 </html>
