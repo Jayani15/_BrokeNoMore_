@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Expense Tracker | Register</title>
+        <link rel="stylesheet" href="css\addnew_expense.css">
+        <link rel="stylesheet" href="css\header.css">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+            <nav>
+        <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+        <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.html">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="budget_summary.html">Summary</a>
+        <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <div class="box">
+      <h2>Add New Expense</h2>
+      <form action="addnew_expense.php" method="post">
+          <fieldset>
+        <label>Date</label><br>
+        <input type="date" name="date"><br><br>
+
+        <label>Category</label><br>
+        <input type="text" placeholder="e.g. Food" name="category"><br><br>
+
+        <label>Amount</label><br>
+        <input type="number" placeholder="e.g. 500" name="amount"><br><br>
+
+        <label>Description</label><br>
+        <input type="text" placeholder="e.g. Pizza" name="description"><br><br>
+
+        <button type="submit" class="save-btn">Save</button>
+
+        </fieldset>
+      </form>
+    </div>
+    
+    </body>
+</html>
