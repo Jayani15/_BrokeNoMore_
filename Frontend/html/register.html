@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BrokeNoMore</title>
+    <link rel="stylesheet" href="css/register.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="box">
+    <h2>Register</h2>
+    <form id="registerForm" action="register.php" method="post">
+        <fieldset>
+
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <small id="passwordHelp" style="color: gray;">
+                Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.
+            </small><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <button type="submit">Register</button>
+
+            <p>Already have an account? <a href="/login.html">Login</a></p>
+
+        </fieldset>
+    </form>
+</div>
+
+<script>
+document.getElementById('registerForm').addEventListener('submit', function (e) {
+    const password = document.getElementById('password').value;
+
+    // Regular expression for password validation
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+    if (!regex.test(password)) {
+        e.preventDefault(); // stop form from submitting
+        alert("Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.");
+    }
+});
+</script>
+
+</body>
+</html>
