@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Category</title>
+    <link rel="stylesheet" href="css/addnew_category.css">
+    <link rel="stylesheet" href="css/header.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<nav>
+    <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+    <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.html">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="budget_summary.html">Summary</a>
+        <a href="profile.html">Profile</a>
+    </div>
+</nav>
+
+<div class="box">
+    <h2>Add New Category</h2>
+    <form method="post" id="categoryForm" action="">
+        <fieldset>
+            <label>Category</label><br>
+            <input type="text" name="category" placeholder="e.g. Food" required><br><br>
+
+            <label>Allocated Amount</label><br>
+            <input type="number" name="allocated_amount" placeholder="e.g. 5000" step="0.01" required><br><br>
+
+            <button type="submit" class="save-btn">Save</button>
+        </fieldset>
+    </form>
+</div>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const budgetId = urlParams.get('id');
+
+  if (!budgetId) {
+    alert("No budget ID provided in URL! Please add ?id=your_budget_id");
+    document.getElementById('categoryForm').style.display = 'none';
+  } else {
+    document.getElementById('categoryForm').action = 'addnew_category.php?id=' + budgetId;
+
+    document.getElementById('categoryForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Stop form for now
+      const allocatedInput = document.querySelector('input[name="allocated_amount"]');
+      const allocated = parseFloat(allocatedInput.value);
+
+      if (isNaN(allocated) || allocated <= 0) {
+        alert("Please enter a valid allocated amount.");
+        return;
+      }
+
+      // Fetch current income and allocated total
+      fetch(`addnew_category.php?id=${budgetId}&check=true`)
+        .then(res => res.json())
+        .then(data => {
+          const income = parseFloat(data.income);
+          const allocatedSum = parseFloat(data.allocated);
+          const newTotal = allocatedSum + allocated;
+
+          if (newTotal > income) {
+            alert("You've exceeded your budget limit for this month!");
+          } else {
+            // All good, submit form
+            e.target.submit();
+          }
+        })
+        .catch(err => {
+          console.error("Check failed", err);
+          alert("Something went wrong while validating the budget.");
+        });
+    });
+  }
+</script>
+</body>
+</html>
