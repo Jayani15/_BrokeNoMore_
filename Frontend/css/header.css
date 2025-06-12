@@ -76,35 +76,6 @@ nav h1 i {
         padding: 10px 15px;
     }
 
-    @media (max-width: 768px) {
-  .desktop-links {
-    display: none;
-  }
-
-  .mobile-nav {
-    display: block;
-    width: 100%;
-  }
-
-  .mobile-nav summary {
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-  }
-
-  .mobile-nav .links {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-  }
-
-  .mobile-nav .links a {
-    margin: 8px 0;
-  }
-}
-}
-
 /* Desktop styles */
 @media (min-width: 1024px) {
     nav {
