@@ -94,7 +94,7 @@ tr:nth-child(even) {
         font-size: 1rem;
     }
     
-    .edit-btn, .delete-btn {
+    .delete-btn {
         padding: 8px 15px;
         font-size: 0.9rem;
     }
