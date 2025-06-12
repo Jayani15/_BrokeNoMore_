@@ -19,12 +19,6 @@ table {
     white-space: nowrap;
 }
 
-table thead,
-table tbody {
-    display: table;
-    width: 100%;
-}
-
 th, td {
     padding: 8px 10px;
     border: 1px solid #ccc;
@@ -35,15 +29,6 @@ th, td {
 .details-btn {
     background-color: #007bff;
     color: white;
-    border: none;
-    padding: 6px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 0.7rem;
-}
-
-.edit-btn {
-    background-color: gold;
     border: none;
     padding: 6px 10px;
     cursor: pointer;
@@ -93,7 +78,7 @@ th, td {
         font-size: 0.9rem;
     }
     
-    .details-btn, .edit-btn, .delete-btn {
+    .details-btn, .delete-btn {
         padding: 8px 12px;
         font-size: 0.8rem;
     }
@@ -110,7 +95,7 @@ th, td {
         font-size: 1rem;
     }
     
-    .details-btn, .edit-btn, .delete-btn {
+    .details-btn, .delete-btn {
         padding: 5px 10px;
         font-size: 0.9rem;
     }
