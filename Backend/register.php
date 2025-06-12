@@ -33,8 +33,6 @@ if ($check->num_rows > 0) {
     $stmt->close();
 }
 
-echo "Password before hashing: " . $password . "<br>";
-echo "Hashed password: " . $hashedPassword . "<br>";
 
 
 $check->close();
