@@ -28,11 +28,6 @@ table {
     white-space: nowrap;
 }
 
-table tbody, table thead {
-    display: table;
-    width: 100%;
-}
-
 td, th {
     padding: 8px 15px;
     text-align: center;
