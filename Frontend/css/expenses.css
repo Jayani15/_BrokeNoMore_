@@ -15,12 +15,6 @@
     white-space: nowrap;
 }
 
-.expense-table thead,
-.expense-table tbody {
-    display: table;
-    width: 100%;
-}
-
 td, th {
     padding: 8px 10px;
     text-align: center;
@@ -47,15 +41,6 @@ tr:nth-child(odd) {
     cursor: pointer;
     color: white;
     font-size: 1rem;
-}
-
-.edit-btn {
-    background-color: gold;
-    border: none;
-    padding: 6px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 0.8rem;
 }
 
 .delete-btn {
@@ -86,7 +71,7 @@ tr:nth-child(odd) {
         font-size: 1rem;
     }
     
-    .edit-btn, .delete-btn {
+    .delete-btn {
         padding: 8px 12px;
         font-size: 0.9rem;
     }
