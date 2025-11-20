@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>BrokeNoMore</title>
+    <link rel="stylesheet" href="css/register.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<div class="box">
+    <h2>Register</h2>
+    <form id="registerForm" action="register.php" method="post">
+        <fieldset>
+
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password</label><br>
+            <div class="password-container">
+                <input type="password" id="password" name="password" required>
+                <i class="fa-solid fa-eye" id="togglePassword"></i>
+            </div>
+            <small id="passwordHelp" style="color: gray;">
+                Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.
+            </small><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <button type="submit">Register</button>
+
+            <p>Already have an account? <a href="login.html">Login</a></p>
+
+        </fieldset>
+    </form>
+</div>
+
+<script>
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+        const password = document.getElementById('password').value;
+
+        // Regular expression for password validation
+        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+        if (!regex.test(password)) {
+            e.preventDefault(); // stop form from submitting
+            alert("Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.");
+        }
+    });
+
+    document.getElementById('togglePassword').addEventListener('click', function () {
+        const passwordField = document.getElementById('password');
+        const type = passwordField.getAttribute('type');
+        if (type === 'password') {
+            passwordField.setAttribute('type', 'text');
+            this.classList.replace('fa-eye', 'fa-eye-slash');
+        } else {
+            passwordField.setAttribute('type', 'password');
+            this.classList.replace('fa-eye-slash', 'fa-eye');
+        }
+    });
+
+</script>
+
+</body>
+</html>

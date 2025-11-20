@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BrokeNoMore - Payment Methods</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/your_budget.css"> <!-- simple table style you already use -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/nav.js"></script>
+</head>
+
+<body>
+
+<nav>
+    <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+    <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.html">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="savings.html">Savings</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="all_transactions.html">Transactions</a>
+        <a href="payment_methods.html">Payments</a>
+        <a href="profile.html">Profile</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Payment Methods</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- #PM_ROWS# -->
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <h3>Add New Payment Method</h3>
+
+    <form action="payment_methods.php" method="POST" class="pm-form">
+        <label>Method Name</label>
+        <input type="text" name="method_name" placeholder="e.g. Cash, Card, UPI" required>
+
+        <label>Details (Optional)</label>
+        <input type="text" name="details" placeholder="e.g. Visa card, GPay, Paytm">
+
+        <button type="submit" class="add-btn">Add Method</button>
+    </form>
+</div>
+
+</body>
+</html>

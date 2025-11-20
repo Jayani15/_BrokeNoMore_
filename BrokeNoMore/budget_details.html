@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>BrokeNoMore</title>
+
+    <link rel="stylesheet" href="css/budget_details.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="js/delete_details.js"></script>
+    <script src="js/nav.js"></script>
+</head>
+
+<body>
+<nav>
+    <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+    <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.html">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="savings.html">Savings</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="all_transactions.html">Transactions</a>
+        <a href="payment_methods.html">Payments</a>
+        <a href="profile.html">Profile</a>
+    </div>
+</nav>
+
+<!-- Heading -->
+<h2 id="head">Budget Details: <!-- #BUDGET_NAME# --></h2>
+
+<!-- Replaced MONTHLY_INCOME with TOTAL_AMOUNT -->
+<p id="para"><b>Total Amount:</b> ₹ <!-- #TOTAL_AMOUNT# --></p>
+<p id="para"><b>Start Date:</b> <!-- #START_DATE# --></p>
+<p id="para"><b>End Date:</b> <!-- #END_DATE# --></p>
+
+<h2>Budget Categories</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Allocated</th>
+            <th>Spent</th>
+            <th>Remaining</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+
+    <!-- #CATEGORY_ROWS# -->
+</table>
+
+<!-- Add Category Button injected via backend -->
+<!-- #ADD_CATEGORY_BTN# -->
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Savings - BrokeNoMore</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/your_budget.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/nav.js"></script>
+</head>
+
+<body>
+<nav>
+    <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+    <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.html">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="savings.html">Savings</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="all_transactions.html">Transactions</a>
+        <a href="payment_methods.html">Payments</a>
+        <a href="profile.html">Profile</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Your Saving Goals</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Goal</th>
+                <th>Target Amount</th>
+                <th>Saved</th>
+                <th>Progress</th>
+                <th>Start Date</th>
+                <th>Transactions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- #SAVINGS_ROWS# -->
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <h3>Add New Saving Goal</h3>
+
+    <form method="POST" action="savings.php">
+        <label>Goal Name</label>
+        <input type="text" name="goal_name" required>
+
+        <label>Target Amount</label>
+        <input type="number" name="target_amount" required>
+
+        <label>Start Date</label>
+        <input type="date" name="start_date" required>
+
+        <button type="submit" class="add-btn">Add Goal</button>
+    </form>
+</div>
+
+</body>
+</html>

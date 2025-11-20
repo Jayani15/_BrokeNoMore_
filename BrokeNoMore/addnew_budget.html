@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>BrokeNoMore — Add New Budget</title>
+    <link rel="stylesheet" href="css/addnew_budget.css">
+    <link rel="stylesheet" href="css/header.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/nav.js"></script>
+</head>
+<body>
+  <nav>
+    <h1>BrokeNoMore</h1>
+
+    <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.html">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="savings.html">Savings</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="all_transactions.html">Transactions</a>
+        <a href="payment_methods.html">Payments</a>
+        <a href="profile.html">Profile</a>
+    </div>
+  </nav>
+
+  <div class="box">
+    <h2>Add New Budget</h2>
+    <form action="addnew_budget.php" method="post" novalidate>
+      <fieldset>
+        <label for="budget_name">Budget Name</label><br>
+        <input id="budget_name" type="text" placeholder="e.g. January 2025" name="budget_name" required><br><br>
+
+        <label for="total_amount">Total Amount</label><br>
+        <input id="total_amount" type="number" placeholder="e.g. 500000" name="total_amount" min="0" step="0.01" required><br><br>
+
+        <label for="start_date">Start Date</label><br>
+        <input id="start_date" type="date" name="start_date" required><br><br>
+
+        <label for="end_date">End Date</label><br>
+        <input id="end_date" type="date" name="end_date" required><br><br>
+
+        <button type="submit">Save</button>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>
