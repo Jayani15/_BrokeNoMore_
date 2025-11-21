@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BrokeNoMore</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Login</h2>
+
+    <form action="login.php" method="post">
+        <fieldset>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Password</label><br>
+
+            <div class="password-container">
+                <input type="password" id="password" name="password" required>
+                <i class="fa-solid fa-eye" id="togglePassword"></i>
+            </div>
+
+            <br><br>
+
+            <button type="submit">Login</button><br><br>
+
+            Don't have an account?
+            <a href="register.html">Register</a>
+
+        </fieldset>
+    </form>
+</div>
+
+<script>
+    document.getElementById('togglePassword').addEventListener('click', function () {
+        const passwordField = document.getElementById('password');
+        const type = passwordField.getAttribute('type');
+
+        if (type === 'password') {
+            passwordField.setAttribute('type', 'text');
+            this.classList.replace('fa-eye', 'fa-eye-slash');
+        } else {
+            passwordField.setAttribute('type', 'password');
+            this.classList.replace('fa-eye-slash', 'fa-eye');
+        }
+    });
+</script>
+
+</body>
+</html>

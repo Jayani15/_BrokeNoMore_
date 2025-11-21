@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BrokeNoMore - Payment Methods</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/your_budget.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/nav.js"></script>
+    <style>
+        input[type="text"], input[type="password"], input[type="date"], input[type="number"] {
+        border: 0.5px solid lightgray;
+        border-radius: 5px;
+        padding: 5px 5px;
+        outline: none;
+        margin-top: 1px;
+        width: 15%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    select {
+    padding: 5px;
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    
+}
+
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+    <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.html">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="savings.php">Savings</a>
+        <a href="notifications.php" class="notif-wrapper">
+            Notifications
+            <span id="notif-count" class="notif-badge" style="display:none;">0</span>
+        </a>
+        <a href="all_transactions.php">Transactions</a>
+        <a href="payment_methods.php">Payments</a>
+        <a href="profile.html">Profile</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Payment Methods</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Details</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{PAYMENT_ROWS}}
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <h3>Add New Payment Method</h3>
+
+    <form action="payment_methods.php" method="POST" class="pm-form">
+        <label>Method Name</label>
+        <input type="text" name="method_name" placeholder="e.g. Cash, Card, UPI" required>
+
+        <label>Details (Optional)</label>
+        <input type="text" name="details" placeholder="e.g. Visa card, GPay, Paytm">
+
+        <button type="submit" class="add-btn">Add Method</button>
+    </form>
+</div>
+
+</body>
+</html>

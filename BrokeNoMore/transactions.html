@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Savings Transactions</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/your_budget.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/nav.js"></script>
+      <style>
+        input[type="text"], input[type="password"], input[type="date"], input[type="number"] {
+        border: 0.5px solid lightgray;
+        border-radius: 5px;
+        padding: 5px 5px;
+        outline: none;
+        margin-top: 1px;
+        width: 15%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    select {
+    padding: 5px;
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-right: 14px;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+        <div class="links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="your_budget.html">Budget</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="savings.php">Savings</a>
+            <a href="notifications.php" class="notif-wrapper">
+    Notifications
+    <span id="notif-count" class="notif-badge" style="display:none;">0</span>
+</a>
+
+            <a href="all_transactions.html">Transactions</a>
+            <a href="payment_methods.html">Payments</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h2>Transactions for Goal: <span id="gname"><!-- #GOAL# --></span></h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Delete</th> <!-- NEW COLUMN -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- #ROWS# -->
+            </tbody>
+        </table>
+
+        <br><br>
+
+        <h3>Add a Transaction</h3>
+
+        <form method="POST">
+            <label>Amount</label>
+            <input type="number" name="amount" required>
+
+            <label>Type</label>
+            <select name="transaction_type" required>
+                <option value="deposit">Deposit</option>
+                <option value="withdraw">Withdraw</option>
+            </select>
+
+            <button class="add-btn">Add Transaction</button>
+        </form>
+    </div>
+
+</body>
+</html>

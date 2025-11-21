@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Savings - BrokeNoMore</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/your_budget.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/nav.js"></script>
+    <style>
+        input[type="text"], input[type="password"], input[type="date"], input[type="number"] {
+        border: 0.5px solid lightgray;
+        border-radius: 5px;
+        padding: 5px 5px;
+        outline: none;
+        margin-top: 1px;
+        width: 15%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+    <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.html">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="savings.php">Savings</a>
+        <a href="notifications.php" class="notif-wrapper">
+    Notifications
+    <span id="notif-count" class="notif-badge" style="display:none;">0</span>
+</a>
+
+        <a href="all_transactions.html">Transactions</a>
+        <a href="payment_methods.html">Payments</a>
+        <a href="profile.html">Profile</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Your Saving Goals</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Goal</th>
+                <th>Target Amount</th>
+                <th>Saved</th>
+                <th>Progress</th>
+                <th>Start Date</th>
+                <th>View</th>
+                <th>Delete</th> <!-- NEW COLUMN -->
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- #SAVINGS_ROWS# -->
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <h3>Add New Saving Goal</h3>
+
+    <form method="POST" action="savings.php">
+        <label>Goal Name</label>
+        <input type="text" name="goal_name" required>
+
+        <label>Target Amount</label>
+        <input type="number" name="target_amount" required>
+
+        <label>Start Date</label>
+        <input type="date" name="start_date" required>
+
+        <button type="submit" class="add-btn">Add Goal</button>
+    </form>
+</div>
+
+</body>
+</html>

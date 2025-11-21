@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>BrokeNoMore — Add New Expense</title>
+    <link rel="stylesheet" href="css/addnew_expense.css">
+    <link rel="stylesheet" href="css/header.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="js/nav.js"></script>
+</head>
+
+<body>
+
+<nav>
+    <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+
+    <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.html">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="savings.html">Savings</a>
+
+        <a href="notifications.php" class="notif-wrapper">
+            Notifications
+            <span id="notif-count" class="notif-badge" style="display:none;">0</span>
+        </a>
+
+        <a href="all_transactions.php">Transactions</a>
+        <a href="payment_methods.php">Payments</a>
+        <a href="profile.html">Profile</a>
+    </div>
+</nav>
+
+<div class="box">
+    <h2>Add New Expense</h2>
+
+    <form id="expenseForm" action="addnew_expense.php" method="post">
+        <fieldset>
+
+            <label>Date</label><br>
+            <input id="date" type="date" name="date" required><br><br>
+
+            <label>Category</label><br>
+            <select name="category_id" id="categoryDropdown" required>
+                <option value="">Loading...</option>
+            </select><br><br>
+
+            <label>Payment Method</label><br>
+            <select name="payment_method_id" id="paymentMethodSelect" required>
+                <option value="">Loading...</option>
+            </select><br><br>
+
+            <label>Amount</label><br>
+            <input id="amount" type="number" name="amount" step="0.01" required><br><br>
+
+            <label>Description</label><br>
+            <input id="description" type="text" name="description" required><br><br>
+
+            <button type="submit" class="save-btn">Save</button>
+
+        </fieldset>
+    </form>
+</div>
+
+<script>
+const dateInput = document.getElementById("date");
+const categoryDropdown = document.getElementById("categoryDropdown");
+const paymentDropdown = document.getElementById("paymentMethodSelect");
+
+async function loadCategories(dateValue) {
+    const res = await fetch("get_categories.php?date=" + encodeURIComponent(dateValue));
+    const data = await res.json();
+
+    categoryDropdown.innerHTML = "<option value=''>-- Select Category --</option>";
+
+    data.forEach(c => {
+        const o = document.createElement("option");
+        o.value = c.category_id;
+        o.textContent = c.category_name;
+        categoryDropdown.appendChild(o);
+    });
+}
+
+async function loadPaymentMethods() {
+    const res = await fetch("get_payment_methods.php");
+    const data = await res.json();
+
+    paymentDropdown.innerHTML = "<option value=''>-- Select Payment Method --</option>";
+
+    data.forEach(p => {
+        const o = document.createElement("option");
+        o.value = p.payment_method_id;
+        o.textContent = p.method_name;
+        paymentDropdown.appendChild(o);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const today = new Date().toISOString().split("T")[0];
+    dateInput.value = today;
+
+    loadCategories(today);
+    loadPaymentMethods();
+});
+
+dateInput.addEventListener("change", () => {
+    loadCategories(dateInput.value);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>BrokeNoMore — Expenses</title>
+    <link rel="stylesheet" href="css/expenses.css">
+    <link rel="stylesheet" href="css/header.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/delete.js"></script>
+    <script src="js/nav.js"></script>
+</head>
+
+<body>
+
+<nav>
+    <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+    <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.html">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="savings.html">Savings</a>
+        <a href="notifications.php" class="notif-wrapper">
+    Notifications
+    <span id="notif-count" class="notif-badge" style="display:none;">0</span>
+</a>
+
+        <a href="all_transactions.html">Transactions</a>
+        <a href="payment_methods.html">Payments</a>
+        <a href="profile.html">Profile</a>
+    </div>
+</nav>
+
+<h1 id="head">Expenses</h1>
+
+<div class="content-wrapper">
+
+    <div class="search-bar">
+        <input type="text" id="expenseSearch"
+            placeholder="Search by Category or Description..."
+            onkeyup="filterExpenses()">
+    </div>
+
+    <div class="table-container">
+        <table class="expense-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Payment Method</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{EXPENSE_ROWS}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<button class="btn" onclick="window.location.href='addnew_expense.html'">
+    Add New Expense
+</button>
+
+<script>
+function filterExpenses() {
+    const search = document.getElementById("expenseSearch").value.toLowerCase();
+    document.querySelectorAll(".expense-table tbody tr").forEach(row => {
+        const cat = row.cells[1].textContent.toLowerCase();
+        const desc = row.cells[3].textContent.toLowerCase();
+        row.style.display = (cat.includes(search) || desc.includes(search)) ? "" : "none";
+    });
+}
+</script>
+
+</body>
+</html>

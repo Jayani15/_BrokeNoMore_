@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>BrokeNoMore</title>
+
+    <link rel="stylesheet" href="css/budget_summary.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/nav.js"></script>
+</head>
+
+<body>
+<nav>
+    <h1><i class="fa-solid fa-paw"></i> BrokeNoMore</h1>
+
+    <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="your_budget.html">Budget</a>
+        <a href="expenses.html">Expenses</a>
+        <a href="savings.html">Savings</a>
+        <a href="notifications.php" class="notif-wrapper">
+    Notifications
+    <span id="notif-count" class="notif-badge" style="display:none;">0</span>
+</a>
+
+        <a href="all_transactions.html">Transactions</a>
+        <a href="payment_methods.html">Payments</a>
+        <a href="profile.html">Profile</a>
+    </div>
+</nav>
+
+<h2>Budget Summary</h2>
+
+<div class="summary-box">
+    <!-- #SUMMARY_VALUES# -->
+</div>
+
+<div style="width: 600px; margin: 50px auto;">
+    <canvas id="budgetChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Placeholder replaced by PHP backend -->
+<!-- #SUMMARY_CHART# -->
+
+</body>
+</html>
